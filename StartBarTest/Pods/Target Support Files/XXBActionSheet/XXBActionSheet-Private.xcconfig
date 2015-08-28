@@ -1,0 +1,5 @@
+#include "XXBActionSheet.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/XXBActionSheet" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/ReactiveCocoa" "${PODS_ROOT}/Headers/Public/XXBActionSheet" "${PODS_ROOT}/Headers/Public/XXBAlertView" "${PODS_ROOT}/Headers/Public/XXBLibs"
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES

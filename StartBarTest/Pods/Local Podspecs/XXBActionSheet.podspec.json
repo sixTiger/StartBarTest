@@ -1,0 +1,12 @@
+{
+  "name": "XXBActionSheet",
+  "version": "1.0.0",
+  "authors": {
+    "杨小兵": "six_tiger@163.com"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "source_files": "XXBActionSheet",
+  "requires_arc": true
+}

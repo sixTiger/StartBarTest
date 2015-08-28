@@ -1,0 +1,13 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, '7.0'
+
+target 'StartBarTest' do
+pod 'ReactiveCocoa', '2.4.7'
+
+pod 'XXBAlertView',:git => 'https://github.com/sixTiger/XXBAlertView'
+pod 'XXBActionSheet',:git => 'https://github.com/sixTiger/XXBActionSheet'
+pod 'XXBLibs', :git => "https://github.com/sixTiger/XXBLibs"
+end
+target 'StartBarTest' do
+end
+

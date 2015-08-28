@@ -1,0 +1,44 @@
+PODS:
+  - ReactiveCocoa (2.4.7):
+    - ReactiveCocoa/UI (= 2.4.7)
+  - ReactiveCocoa/Core (2.4.7):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.4.7)
+  - ReactiveCocoa/UI (2.4.7):
+    - ReactiveCocoa/Core
+  - XXBActionSheet (1.0.0)
+  - XXBAlertView (1.0.0)
+  - XXBLibs (1.0.0)
+
+DEPENDENCIES:
+  - ReactiveCocoa (= 2.4.7)
+  - XXBActionSheet (from `https://github.com/sixTiger/XXBActionSheet`)
+  - XXBAlertView (from `https://github.com/sixTiger/XXBAlertView`)
+  - XXBLibs (from `https://github.com/sixTiger/XXBLibs`)
+
+EXTERNAL SOURCES:
+  XXBActionSheet:
+    :git: https://github.com/sixTiger/XXBActionSheet
+  XXBAlertView:
+    :git: https://github.com/sixTiger/XXBAlertView
+  XXBLibs:
+    :git: https://github.com/sixTiger/XXBLibs
+
+CHECKOUT OPTIONS:
+  XXBActionSheet:
+    :commit: a287f8c85f711f9f8ac4d4eae0c9b653571bffcb
+    :git: https://github.com/sixTiger/XXBActionSheet
+  XXBAlertView:
+    :commit: a475dbaff33e2a335576140584f8c60699a7d24d
+    :git: https://github.com/sixTiger/XXBAlertView
+  XXBLibs:
+    :commit: cf10c767ff90032f47e5564942c32d8b7b0eee98
+    :git: https://github.com/sixTiger/XXBLibs
+
+SPEC CHECKSUMS:
+  ReactiveCocoa: eb38dee0a0e698f73a9b25e5c1faea2bb4c79240
+  XXBActionSheet: 3eccf205525bc0ab6f98891a556b78f86bff1359
+  XXBAlertView: 7e72d8de413513d8a3f521c2719f135ce88c45a1
+  XXBLibs: 6f894394d94e7678f68b8432671d23bbf85bdc30
+
+COCOAPODS: 0.38.2
