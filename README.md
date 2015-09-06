@@ -1,0 +1,4 @@
+# StartBarTest
+一个电池栏的测试程序
+tableView滑动的时候会有一个view挡着状态栏<br>
+tabelView滑动的时候会自动拉伸图片
