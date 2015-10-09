@@ -26,13 +26,13 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   XXBActionSheet:
-    :commit: a287f8c85f711f9f8ac4d4eae0c9b653571bffcb
+    :commit: c4a5aa0f863f5826ba821751c97d5efd717d6502
     :git: https://github.com/sixTiger/XXBActionSheet
   XXBAlertView:
-    :commit: a475dbaff33e2a335576140584f8c60699a7d24d
+    :commit: d32e40ebe69e252e4e40268d383ec5881975d52d
     :git: https://github.com/sixTiger/XXBAlertView
   XXBLibs:
-    :commit: cf10c767ff90032f47e5564942c32d8b7b0eee98
+    :commit: b7c4165578d1983d815c7a5b552f5db4157e75e5
     :git: https://github.com/sixTiger/XXBLibs
 
 SPEC CHECKSUMS:

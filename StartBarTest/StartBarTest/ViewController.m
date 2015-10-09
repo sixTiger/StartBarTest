@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import <XXBLibs.h>
 
-#define statuBarStartHeight 150
+#define headViewHeight 150
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic , weak)UITableView *tableView;
 @property(nonatomic , weak)UIView *statusBarView;
@@ -22,7 +22,8 @@
     [super viewDidLoad];
     [self.tableView bringSubviewToFront:self.hearView];
     [self addObserverOnTableView];
-    self.tableView.contentInset = UIEdgeInsetsMake(statuBarStartHeight, 0, 0, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(headViewHeight, 0, 0, 0);
+    self.tableView.tintColor = [UIColor redColor];
 }
 - (void)dealloc
 {
@@ -37,7 +38,7 @@
 {
     if ([keyPath isEqualToString:@"contentOffset"]) {
         CGFloat offsetY = _tableView.contentOffset.y;
-        CGFloat height = statuBarStartHeight - self.tableView.contentOffset.y;
+        CGFloat height = headViewHeight - self.tableView.contentOffset.y;
         if (height <= 10)
         {
             height = 10;

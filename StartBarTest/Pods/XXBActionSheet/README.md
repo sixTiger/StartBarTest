@@ -1,7 +1,6 @@
 # XXBActionSheet
 #和UIActionSheet 一样好用
-
-## ios8上做了横竖屏适配，ios7上目前只支持竖屏 会后续更新
+## 目前已经全面支持ios7.0+
 支持pod
 ```c
 pod 'XXBActionSheet',:git => 'https://github.com/sixTiger/XXBActionSheet'

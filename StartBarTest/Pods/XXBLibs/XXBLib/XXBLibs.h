@@ -15,6 +15,9 @@
     #import "XXBDeviceHelp.h"
     #import "XXBLog.h"
     #import "XXBNetWorkExtion.h"
+    #import "XXBDiskHelp.h"
+    #import "XXBSystemHelp.h"
+    #import "XXBFileHelper.h"
 
     #import "NSDate+Help.h"
     #import "UIBarButtonItem+Help.h"
@@ -24,5 +27,4 @@
     #import "UIView+Help.h"
     #import "UIView+MotionEffect.h"
     #import "NSData+Help.h"
-
 #endif

@@ -69,8 +69,8 @@
     return [strM copy];
 }
 /**
-  *  返回Base64遍吗后的字符串
-  */
+ *  返回Base64遍吗后的字符串
+ */
 - (NSString *)base64Encode {
     NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding];
     
@@ -84,7 +84,35 @@
     
     return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
-
+/**
+ *  获取字符串的长度
+ *
+ *  活动字符长度，例如“小兵”为4，“xiaobing”为8，如果只有空格，认为是0，例如“   ”为0
+ *
+ *  @return 字符串的长度
+ */
+- (NSUInteger)getCharacterCount
+{
+    NSUInteger i, n = [self length], l = 0, a = 0, b = 0;
+    unichar c;
+    
+    for(i = 0; i < n; i++)
+    {
+        c = [self characterAtIndex:i];
+        if(isblank(c)) {
+            b++;
+        }
+        else if(isascii(c)) {
+            a++;
+        }
+        else {
+            l++;
+        }
+    }
+    if(a==0 && l==0) return 0;
+    
+    return 2*l+a+b;
+}
 /**
  *  计算一行字的size
  *
@@ -127,8 +155,25 @@
  */
 - (BOOL)isValidEmail
 {
-    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
-    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
-    return [emailTest evaluateWithObject:self];
+    return [[NSPredicate predicateWithFormat:@"SELF MATCHES [A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"] evaluateWithObject:self];
+}
+- (NSString *)URLEncode
+{
+    if ([self isKindOfClass:[NSNull class]])
+    {
+        return @"";
+    }
+    NSString *result =(__bridge NSString*)CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,(CFStringRef)self,NULL,CFSTR("!*'();:@&=+$,/?%#[]"),kCFStringEncodingUTF8);
+    return result;
+}
+/**
+ *  对url进行解码
+ *
+ *  @return 解码好的字符串
+ */
+- (NSString *)URLDecode
+{
+    NSString *result =(__bridge NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault,(CFStringRef)self,CFSTR(""),kCFStringEncodingUTF8);
+    return result;
 }
 @end
