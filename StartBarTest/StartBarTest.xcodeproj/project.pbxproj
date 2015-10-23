@@ -14,6 +14,7 @@
 		62A2E5441B90425100CD1DDF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62A2E5431B90425100CD1DDF /* Images.xcassets */; };
 		62A2E5471B90425200CD1DDF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62A2E5451B90425200CD1DDF /* LaunchScreen.xib */; };
 		62A2E5531B90425200CD1DDF /* StartBarTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A2E5521B90425200CD1DDF /* StartBarTestTests.m */; };
+		62F24E8D1BDA427B00053185 /* HeadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F24E8C1BDA427B00053185 /* HeadTest.m */; };
 		91554FB6D46B67F75DFAA706 /* libPods-StartBarTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66E6972D5DA4B5199B6AC7AD /* libPods-StartBarTest.a */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,8 @@
 		62A2E54C1B90425200CD1DDF /* StartBarTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StartBarTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62A2E5511B90425200CD1DDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62A2E5521B90425200CD1DDF /* StartBarTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartBarTestTests.m; sourceTree = "<group>"; };
+		62F24E8B1BDA427B00053185 /* HeadTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadTest.h; sourceTree = "<group>"; };
+		62F24E8C1BDA427B00053185 /* HeadTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadTest.m; sourceTree = "<group>"; };
 		66E6972D5DA4B5199B6AC7AD /* libPods-StartBarTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StartBarTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DEFA5EC8E7B64CB34EFC6B7 /* Pods-StartBarTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StartBarTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-StartBarTest/Pods-StartBarTest.release.xcconfig"; sourceTree = "<group>"; };
 		A7E47096B1A3D7CE73A34CF0 /* Pods-StartBarTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StartBarTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StartBarTest/Pods-StartBarTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +107,8 @@
 				62A2E5431B90425100CD1DDF /* Images.xcassets */,
 				62A2E5451B90425200CD1DDF /* LaunchScreen.xib */,
 				62A2E5361B90425100CD1DDF /* Supporting Files */,
+				62F24E8B1BDA427B00053185 /* HeadTest.h */,
+				62F24E8C1BDA427B00053185 /* HeadTest.m */,
 			);
 			path = StartBarTest;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 				62A2E53F1B90425100CD1DDF /* ViewController.m in Sources */,
 				62A2E53C1B90425100CD1DDF /* AppDelegate.m in Sources */,
 				62A2E5391B90425100CD1DDF /* main.m in Sources */,
+				62F24E8D1BDA427B00053185 /* HeadTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
