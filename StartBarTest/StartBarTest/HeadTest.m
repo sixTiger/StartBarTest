@@ -9,11 +9,12 @@
 #import "HeadTest.h"
 #import <XXBLibs.h>
 
-#define headViewHeight 200
+#define headViewHeight 300
 @interface HeadTest ()<UITableViewDataSource,UITableViewDelegate>
-@property(nonatomic , weak)UITableView *tableView;
-@property(nonatomic , weak)UIView *statusBarView;
-@property(nonatomic , weak)UIImageView *hearView;
+@property(nonatomic , weak)UITableView      *tableView;
+@property(nonatomic , weak)UIView           *statusBarView;
+@property(nonatomic , weak)UIImageView      *hearView;
+@property(nonatomic , weak) UIWindow        *startWindow;
 
 @end
 
@@ -23,7 +24,6 @@
     [self.tableView bringSubviewToFront:self.hearView];
     [self addObserverOnTableView];
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
-    self.tableView.tintColor = [UIColor redColor];
 }
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -51,12 +51,9 @@
 {
     if ([keyPath isEqualToString:@"contentOffset"]) {
         CGFloat offsetY = _tableView.contentOffset.y;
-        CGFloat height = headViewHeight - self.tableView.contentOffset.y;
-        if (height <= 10)
-        {
-            height = 10;
-        }
-        self.hearView.height =  height;
+        NSLog(@"%@",@(offsetY));
+        
+        self.hearView.y =  - self.tableView.contentOffset.y - headViewHeight;
         if (offsetY > 0)
         {
             [self p_showStatusBarBG:YES animated:YES];
@@ -64,6 +61,14 @@
         else
         {
             [self p_showStatusBarBG:NO animated:YES];
+        }
+        if (offsetY >= -20)
+        {
+            self.startWindow.y = - offsetY - 20;
+        }
+        else
+        {
+            self.startWindow.y = 0;
         }
     }
 }
@@ -128,6 +133,7 @@
     if (_hearView == nil)
     {
         UIImageView *headView = [[UIImageView alloc] initWithFrame:CGRectMake(0, -headViewHeight, CGRectGetWidth(self.tableView.frame), headViewHeight)];
+        headView.backgroundColor = [UIColor blueColor];
         headView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleWidth| UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin;
         headView.image =  [UIImage imageNamed:@"head"];
         [self.view insertSubview:headView belowSubview:self.tableView];
@@ -136,5 +142,12 @@
     }
     return _hearView;
 }
-
+- (UIWindow *)startWindow
+{
+    if (_startWindow == nil)
+    {
+        _startWindow = [[UIApplication sharedApplication] valueForKeyPath:@"statusBarWindow"];
+    }
+    return _startWindow;
+}
 @end
