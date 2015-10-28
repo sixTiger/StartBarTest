@@ -65,9 +65,12 @@
         if (offsetY >= -20)
         {
             self.startWindow.y = - offsetY - 20;
+//            self.startWindow.backgroundColor = [UIColor redColor];
         }
         else
         {
+            
+//            self.startWindow.backgroundColor = [UIColor blackColor];
             self.startWindow.y = 0;
         }
     }
